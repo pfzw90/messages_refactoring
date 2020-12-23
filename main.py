@@ -12,7 +12,7 @@ class Mailer:
         self.SMTP = smtp
         self.IMAP = imap
 
-    def send_message(self, text: str, subj: list, to: str):
+    def send_message(self, text: str, to: list, subj: str):
         message = MIMEMultipart()
         message['From'] = self.login
         message['To'] = ', '.join(to)
